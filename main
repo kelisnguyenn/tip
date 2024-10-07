@@ -1,0 +1,43 @@
+import java.util.Scanner;
+//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
+// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+public class Main {
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        System.out.print("Please the total bill before tip: ");
+        double initial = s.nextDouble();
+        System.out.print("Please enter amount of people who will be paying: ");
+        int persons = s.nextInt();
+        System.out.print("Please enter the desired tip percentage: ");
+        double tipPercent = s.nextDouble();
+
+
+
+
+        double tip = initial * tipPercent/100;
+        double next = tip + initial;
+        double finalPP = next / persons;
+        double tipPP = tip / persons;
+
+
+
+
+        System.out.println("---------------------------------");
+        System.out.print("| Total Tip Amount: $");
+        System.out.format("%.2f", tip);
+        System.out.println("|");
+        System.out.println("---------------------------------");
+        System.out.print("| Total Bill Cost: $");
+        System.out.format("%.2f", next);
+        System.out.println("|");
+        System.out.println("---------------------------------");
+        System.out.print("| Tip Per Person: $");
+        System.out.format("%.2f", tipPP);
+        System.out.println("|");
+        System.out.println("---------------------------------");
+        System.out.print("| Total Per Person: $");
+        System.out.format("%.2f", finalPP);
+        System.out.println("|");
+        System.out.println("---------------------------------");
+    }
+}
